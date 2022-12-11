@@ -9,7 +9,6 @@ export default {
   cloudPublicKey: process.env.CLOUDINARY_PUBLIC_KEY,
   cloudSecretKey: process.env.CLOUDINARY_SECRET_KEY,
   stripeSecretKey: process.env.STRIPE_PRIVATE_KEY as string,
-  clientDomain: process.env.CLIENT_DOMAIN as string,
   auth0Domain: process.env.REACT_APP_AUTH0_DOMAIN as string,
   clientIdAuth0: process.env.REACT_APP_AUTH0_CLIENT_ID as string,
   uniqueIdentifier: process.env.REACT_APP_AUTH0_UNIQUE_IDENTIFIER as string,

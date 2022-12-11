@@ -61,8 +61,8 @@ export const checkoutProcessStripe = async (
         enabled: true,
       },
       mode: 'payment',
-      success_url: `${env.clientDomain}/profile?success=true&itemId=${req.body.item.id}&userId=${req.body.userId}`,
-      cancel_url: `${env.clientDomain}/profile`,
+      success_url: `${env.clientAppUrl}/profile?success=true&itemId=${req.body.item.id}&userId=${req.body.userId}`,
+      cancel_url: `${env.clientAppUrl}/profile`,
     });
 
     if (session.url) {
