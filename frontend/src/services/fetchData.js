@@ -98,8 +98,6 @@ export const updateUserInfo = async (id, info) => {
 
       const data = await axios.put(`${env.urlBase}/user/${id}`, formData, {
         headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': `${env.urlBase}`,
         },
       });
