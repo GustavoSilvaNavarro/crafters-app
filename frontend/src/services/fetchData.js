@@ -9,6 +9,11 @@ export const retrievePosts = async email => {
     const data = await fetch(`${env.urlBase}/posts/${email}`, {
       method: 'GET',
       mode: 'cors',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': `${env.urlBase}`,
+      },
     });
     const posts = await data.json();
 
@@ -28,6 +33,9 @@ export const createNewPost = async post => {
 
       const data = await fetch(`${env.urlBase}/posts`, {
         method: 'POST',
+        headers: {
+          'Access-Control-Allow-Origin': `${env.urlBase}`,
+        },
         body: fd,
       });
 
@@ -45,6 +53,11 @@ export const retrieveUser = async userEmail => {
     const data = await fetch(`${env.urlBase}/user/${userEmail}`, {
       method: 'GET',
       mode: 'cors',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': `${env.urlBase}`,
+      },
     });
     const newUser = await data.json();
 
@@ -61,6 +74,7 @@ export const storeUser = async body => {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': `${env.urlBase}`,
       },
       body: JSON.stringify(body),
     });
@@ -82,7 +96,13 @@ export const updateUserInfo = async (id, info) => {
         formData.append(name, info[name]);
       }
 
-      const data = await axios.put(`${env.urlBase}/user/${id}`, formData);
+      const data = await axios.put(`${env.urlBase}/user/${id}`, formData, {
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': `${env.urlBase}`,
+        },
+      });
 
       const userUpdated = data.data;
       return userUpdated;
@@ -99,6 +119,11 @@ export const getSinglePostData = async id => {
     const singlePost = await axios.get(`${env.urlBase}/posts/single-post/${id}`, {
       method: 'GET',
       mode: 'cors',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': `${env.urlBase}`,
+      },
     });
 
     if (singlePost.status === 200) return singlePost.data;
@@ -113,6 +138,11 @@ export const getAllPosts = async () => {
     const data = await fetch(`${env.urlBase}/listPosts`, {
       method: 'GET',
       mode: 'cors',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': `${env.urlBase}`,
+      },
     });
 
     const allPosts = await data.json();
@@ -129,6 +159,11 @@ export const deleteSinglePost = async idPost => {
       const data = await fetch(`${env.urlBase}/posts/delete-post/${idPost}`, {
         method: 'DELETE',
         mode: 'cors',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': `${env.urlBase}`,
+        },
       });
 
       return await data.json();
@@ -147,6 +182,7 @@ export const updateStateOfPost = async idPost => {
         headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': `${env.urlBase}`,
         },
         body: JSON.stringify({ sold: true }),
       });

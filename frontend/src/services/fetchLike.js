@@ -5,6 +5,11 @@ export const getSingleLike = async (idUser, idPost) => {
     const data = await fetch(`${env.urlBase}/likes/user/${idUser}/post/${idPost}`, {
       method: 'GET',
       mode: 'cors',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': `${env.urlBase}`,
+      },
     });
 
     return await data.json();
@@ -21,6 +26,7 @@ export const addLikeToPost = async body => {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': `${env.urlBase}`,
       },
       body: JSON.stringify(body),
     });
@@ -36,6 +42,11 @@ export const deleteLike = async id => {
     const res = await fetch(`${env.urlBase}/likes/delete/${id}`, {
       method: 'DELETE',
       mode: 'cors',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': `${env.urlBase}`,
+      },
     });
 
     return await res.json();

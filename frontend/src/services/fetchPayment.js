@@ -8,6 +8,7 @@ export const paymentApi = async item => {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': `${env.urlBase}`,
       },
       body: JSON.stringify(item),
     });

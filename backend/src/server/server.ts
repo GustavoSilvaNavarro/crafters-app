@@ -1,6 +1,6 @@
 import express, { Application } from 'express';
 import cors from 'cors';
-import morgan from 'morgan';
+// import morgan from 'morgan';
 
 import env from '../utils/env';
 // import { verifyJwt } from '../middleware/auth';
@@ -26,7 +26,7 @@ app.use(
   })
 );
 // app.use(verifyJwt);
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 
 app.use('/listPosts', mainRoutes);
 app.use('/user', userRoutes);

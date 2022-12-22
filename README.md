@@ -58,7 +58,7 @@ CLIENT_DOMAIN_URL= //example http://localhost:3000
 ```
 
 2. Run development server
-```json
+```shell
 npm run start:dev
 ```
 
@@ -70,7 +70,7 @@ REACT_APP_AUTH0_DOMAIN=
 REACT_APP_AUTH0_CLIENT_ID=
 ```
 2. Run react in developer mode
-```json
+```shell
 npm start
 ```
 

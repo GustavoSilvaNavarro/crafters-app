@@ -9,6 +9,7 @@ export const createNewComment = async newComment => {
         headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': `${env.urlBase}`,
         },
         body: JSON.stringify(newComment),
       });
@@ -27,6 +28,11 @@ export const getCommentsByPost = async id => {
       const allComments = await fetch(`${env.urlBase}/comments/${id}`, {
         method: 'GET',
         mode: 'cors',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': `${env.urlBase}`,
+        },
       });
 
       return await allComments.json();
@@ -42,6 +48,11 @@ export const deleteComment = async idComment => {
       const data = await fetch(`${env.urlBase}/comments/delete/${idComment}`, {
         method: 'DELETE',
         mode: 'cors',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': `${env.urlBase}`,
+        },
       });
 
       return await data.json();
