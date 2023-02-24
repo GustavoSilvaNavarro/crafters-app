@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import { checkoutProcessStripe } from '../controllers/payment-controllers';
+import { checkoutProcessStripe } from '@/controllers/payment-controllers';
 
 const router = Router();
 

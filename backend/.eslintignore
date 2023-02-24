@@ -7,3 +7,4 @@ husky
 jest.config.js
 __assets__
 webpack.config.js
+nodemon.json

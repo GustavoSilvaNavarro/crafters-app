@@ -1,6 +1,6 @@
 import 'dotenv/config';
-import app from './server/server';
-import { sequelize } from './models/connectionDb';
+import app from '@/server/server';
+import { sequelize } from '@/models/connectionDb';
 
 (async function main() {
   try {

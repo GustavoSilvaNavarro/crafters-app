@@ -6,7 +6,7 @@ import {
   listWishByUser,
   getSingleWishList,
   getNumberOfYOurWishList,
-} from '../models/daos/wishlist-daos';
+} from '@/models/daos/wishlist-daos';
 
 export const addToTheWishList = async (req: Request, res: Response, next: NextFunction) => {
   try {

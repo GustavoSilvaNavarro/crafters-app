@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
-import { retrieveAllPosts } from '../models/daos/main-daos';
+import { retrieveAllPosts } from '@/models/daos/main-daos';
 
 export const getListOfPosts = async (_req: Request, res: Response, next: NextFunction) => {
   try {

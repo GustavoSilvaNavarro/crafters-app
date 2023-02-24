@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
-import { addLike, getOneLike, deleteOneLike } from '../models/daos/like-daos';
+import { addLike, getOneLike, deleteOneLike } from '@/models/daos/like-daos';
 
 export const addLikeToPost = async (req: Request, res: Response, next: NextFunction) => {
   try {

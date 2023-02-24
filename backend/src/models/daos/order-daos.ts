@@ -1,8 +1,8 @@
-import OrderModel from '../schemas/order-models';
-import UserModel from '../schemas/user-schema';
-import PostModel from '../schemas/post-models';
+import OrderModel from '@/models/schemas/order-models';
+import UserModel from '@/models/schemas/user-schema';
+import PostModel from '@/models/schemas/post-models';
 
-import { AppErrors, HttpStatusCode } from '../../helpers/app-error';
+import { AppErrors, HttpStatusCode } from '@/helpers/app-error';
 
 export const addOrder = async (idUser: string, idPost: string) => {
   if (!isNaN(Number(idUser)) && !isNaN(Number(idPost))) {

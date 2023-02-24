@@ -1,13 +1,13 @@
 import { Router } from 'express';
 
-import { upload } from '../services/multer';
+import { upload } from '@/services/multer';
 import {
   createNewPost,
   getAllPosts,
   getSinglePost,
   deletePost,
   updatePostAfterPurchase,
-} from '../controllers/post-controllers';
+} from '@/controllers/post-controllers';
 
 const router = Router();
 

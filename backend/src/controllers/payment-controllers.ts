@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from 'express';
 import Stripe from 'stripe';
 
-import env from '../utils/env';
-import { IItem } from '../types/app-types';
+import env from '@/utils/env';
+import { IItem } from '@/types/app-types';
 
 const stripe = new Stripe(env.stripeSecretKey, { apiVersion: '2022-08-01' });
 

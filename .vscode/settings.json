@@ -1,0 +1,22 @@
+{
+  "cSpell.words": [
+    "CLOUDINARY",
+    "codepaths",
+    "Crafters",
+    "DATABASENAME",
+    "expressjwt",
+    "Favs",
+    "filepond",
+    "jwks",
+    "linebreak",
+    "prestart",
+    "sweetalert",
+    "tailwindcss",
+    "tsbuildinfo",
+    "webfonts"
+  ],
+  "eslint.workingDirectories": [
+    "./backend",
+    "./frontend"
+  ],
+}

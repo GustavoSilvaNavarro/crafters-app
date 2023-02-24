@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
-import { postNewComment, getCommentsByPost, deleteOneComment } from '../models/daos/comment-daos';
+import { postNewComment, getCommentsByPost, deleteOneComment } from '@/models/daos/comment-daos';
 
 export const createNewComment = async (req: Request, res: Response, next: NextFunction) => {
   try {

@@ -1,13 +1,13 @@
 import { DataTypes, Model, Optional } from 'sequelize';
 
-import { sequelize } from '../connectionDb';
-import { PostSchema } from './post-models';
-import { CommentSchema } from './comment-models';
-import { WishListSchema } from './wishList-models';
-import { OrderSchema } from './order-models';
-import { LikeSchema } from './like-models';
+import { sequelize } from '@/models/connectionDb';
+import { PostSchema } from '@/models/schemas/post-models';
+import { CommentSchema } from '@/models/schemas/comment-models';
+import { WishListSchema } from '@/models/schemas/wishList-models';
+import { OrderSchema } from '@/models/schemas/order-models';
+import { LikeSchema } from '@/models/schemas/like-models';
 
-import { IUser } from '../../types/app-types';
+import { IUser } from '@/types/app-types';
 
 const UserSchema = sequelize.define<Model<IUser, Optional<IUser, 'id'>>>('users', {
   id: {

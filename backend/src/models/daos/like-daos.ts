@@ -1,7 +1,7 @@
-import LikeModel from '../schemas/like-models';
-import { AppErrors, HttpStatusCode } from '../../helpers/app-error';
+import LikeModel from '@/models/schemas/like-models';
+import { AppErrors, HttpStatusCode } from '@/helpers/app-error';
 
-import { ILike } from '../../types/app-types';
+import { ILike } from '@/types/app-types';
 
 export const getOneLike = async (idPost: string, idUser: string) => {
   if (!isNaN(Number(idPost)) && !isNaN(Number(idUser))) {

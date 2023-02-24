@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import { createNewComment, retrieveCommentsByPost, deleteSingleComment } from '../controllers/comment-controllers';
+import { createNewComment, retrieveCommentsByPost, deleteSingleComment } from '@/controllers/comment-controllers';
 
 const router = Router();
 

@@ -1,10 +1,10 @@
 import fs from 'fs-extra';
 
-import UserSchema from '../schemas/user-schema';
-import { checkValidEmail } from '../../helpers/helper-functions';
-import { IUser, IFileImage } from '../../types/app-types';
-import { AppErrors, HttpStatusCode } from '../../helpers/app-error';
-import { uploadImage, deleteImage } from '../../services/cloudinary';
+import UserSchema from '@/models/schemas/user-schema';
+import { checkValidEmail } from '@/helpers/helper-functions';
+import { IUser, IFileImage } from '@/types/app-types';
+import { AppErrors, HttpStatusCode } from '@/helpers/app-error';
+import { uploadImage, deleteImage } from '@/services/cloudinary';
 
 export const retrieveUserInfo = async (email: string) => {
   if (email && checkValidEmail(email)) {

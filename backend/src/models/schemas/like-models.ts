@@ -1,8 +1,7 @@
 import { DataTypes, Model, Optional } from 'sequelize';
 
-import { sequelize } from '../connectionDb';
-
-import { ILike } from '../../types/app-types';
+import { sequelize } from '@/models/connectionDb';
+import { ILike } from '@/types/app-types';
 
 export const LikeSchema = sequelize.define<Model<ILike, Optional<ILike, 'id'>>>('likes', {
   id: {

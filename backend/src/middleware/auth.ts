@@ -1,7 +1,7 @@
 import { expressjwt, GetVerificationKey } from 'express-jwt';
 import { expressJwtSecret } from 'jwks-rsa';
 
-import env from '../utils/env';
+import env from '@/utils/env';
 
 export const verifyJwt = expressjwt({
   secret: expressJwtSecret({

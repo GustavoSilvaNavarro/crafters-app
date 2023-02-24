@@ -1,8 +1,8 @@
-import CommentModels from '../schemas/comment-models';
-import UserModels from '../schemas/user-schema';
+import CommentModels from '@/models/schemas/comment-models';
+import UserModels from '@/models/schemas/user-schema';
 
-import { IComment } from '../../types/app-types';
-import { AppErrors, HttpStatusCode } from '../../helpers/app-error';
+import { IComment } from '@/types/app-types';
+import { AppErrors, HttpStatusCode } from '@/helpers/app-error';
 
 export const getCommentsByPost = async (idPost: string) => {
   if (!isNaN(Number(idPost))) {

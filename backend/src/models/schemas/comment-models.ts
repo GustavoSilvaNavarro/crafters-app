@@ -1,8 +1,7 @@
 import { DataTypes, Model, Optional } from 'sequelize';
 
-import { sequelize } from '../connectionDb';
-
-import { IComment } from '../../types/app-types';
+import { sequelize } from '@/models/connectionDb';
+import { IComment } from '@/types/app-types';
 
 export const CommentSchema = sequelize.define<Model<IComment, Optional<IComment, 'id'>>>('comments', {
   id: {

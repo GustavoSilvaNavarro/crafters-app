@@ -6,7 +6,7 @@ import {
   getWishListByUser,
   getOneWish,
   numberOfFavs,
-} from '../controllers/wishlist-controllers';
+} from '@/controllers/wishlist-controllers';
 
 const router = Router();
 

@@ -1,6 +1,6 @@
 import { Sequelize, Dialect } from 'sequelize';
 
-import env from '../utils/env';
+import env from '@/utils/env';
 
 export const sequelize = new Sequelize(env.dbDataBaseName, env.dbUserName, env.dbPassword, {
   host: env.dbHost,

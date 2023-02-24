@@ -6,7 +6,7 @@ import {
   retrieveOnePost,
   deleteOnePost,
   updatePostPartially,
-} from '../models/daos/post-daos';
+} from '@/models/daos/post-daos';
 
 export const getAllPosts = async (req: Request, res: Response, next: NextFunction) => {
   try {

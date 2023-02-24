@@ -1,7 +1,7 @@
-import WishListModel from '../schemas/wishList-models';
-import PostSchema from '../schemas/post-models';
-import { IWishList } from '../../types/app-types';
-import { AppErrors, HttpStatusCode } from '../../helpers/app-error';
+import WishListModel from '@/models/schemas/wishList-models';
+import PostSchema from '@/models/schemas/post-models';
+import { IWishList } from '@/types/app-types';
+import { AppErrors, HttpStatusCode } from '@/helpers/app-error';
 
 export const getSingleWishList = async (idPost: string, idUser: string) => {
   if (!isNaN(Number(idPost)) && !isNaN(Number(idUser))) {

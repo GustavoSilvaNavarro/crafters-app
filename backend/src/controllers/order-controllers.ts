@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
-import { addOrder } from '../models/daos/order-daos';
+import { addOrder } from '@/models/daos/order-daos';
 
 export const createNewOrder = async (req: Request, res: Response, next: NextFunction) => {
   try {

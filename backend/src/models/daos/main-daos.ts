@@ -1,5 +1,5 @@
-import PostSchema from '../schemas/post-models';
-import UserModel from '../schemas/user-schema';
+import PostSchema from '@/models/schemas/post-models';
+import UserModel from '@/models/schemas/user-schema';
 
 export const retrieveAllPosts = async () => {
   const allPosts = await PostSchema.findAll({

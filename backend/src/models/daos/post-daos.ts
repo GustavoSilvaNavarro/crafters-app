@@ -1,12 +1,12 @@
 import fs from 'fs-extra';
 
-import PostModels from '../schemas/post-models';
-import UserModel from '../schemas/user-schema';
-import { checkValidEmail, checkTwoDecimalNumber } from '../../helpers/helper-functions';
+import PostModels from '@/models/schemas/post-models';
+import UserModel from '@/models/schemas/user-schema';
+import { checkValidEmail, checkTwoDecimalNumber } from '@/helpers/helper-functions';
 
-import { uploadImage, deleteImage } from '../../services/cloudinary';
-import { IPost, IFileImage } from '../../types/app-types';
-import { AppErrors, HttpStatusCode } from '../../helpers/app-error';
+import { uploadImage, deleteImage } from '@/services/cloudinary';
+import { IPost, IFileImage } from '@/types/app-types';
+import { AppErrors, HttpStatusCode } from '@/helpers/app-error';
 
 export const retrievePostsData = async (email: string) => {
   if (checkValidEmail(email)) {

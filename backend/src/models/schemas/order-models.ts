@@ -1,8 +1,7 @@
 import { DataTypes, Model, Optional } from 'sequelize';
 
-import { sequelize } from '../connectionDb';
-
-import { IOrder } from '../../types/app-types';
+import { sequelize } from '@/models/connectionDb';
+import { IOrder } from '@/types/app-types';
 
 export const OrderSchema = sequelize.define<Model<IOrder, Optional<IOrder, 'id'>>>('orders', {
   id: {

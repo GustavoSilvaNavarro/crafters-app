@@ -1,6 +1,5 @@
 /package-lock.json
 /coverage
-/yarn.lock
 
 # Dependency directories
 /node_modules

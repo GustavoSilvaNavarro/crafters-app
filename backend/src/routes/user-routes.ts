@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
-import { upload } from '../services/multer';
-import { getSingleUserInfo, postNewUser, updateUserInfo } from '../controllers/user-controllers';
+import { upload } from '@/services/multer';
+import { getSingleUserInfo, postNewUser, updateUserInfo } from '@/controllers/user-controllers';
 
 const router = Router();
 

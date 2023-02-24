@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
-import { retrieveUserInfo, createNewUser, upgradeInfoUser } from '../models/daos/user-daos';
+import { retrieveUserInfo, createNewUser, upgradeInfoUser } from '@/models/daos/user-daos';
 
 export const getSingleUserInfo = async (req: Request, res: Response, next: NextFunction) => {
   try {
